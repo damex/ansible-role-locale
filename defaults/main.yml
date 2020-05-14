@@ -1,7 +1,7 @@
 ---
-locale_default_locale: "en_US.UTF-8"
 locale_locales:
-  - "{{ locale_default_locale }}"
+  - "en_US.UTF-8 UTF-8"
 locale_package_name: "locales"
 locale_package_version: ""
 locale_package_state: "present"
+locale_locale_gen_conf_file: "/etc/locale.gen"
