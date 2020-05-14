@@ -1,0 +1,16 @@
+---
+- name: ensure locales
+  debconf:
+    name: locales
+    question: locales/locales_to_be_generated
+    value: "{{ locale_locales | join(', ') }}"
+    vtype: multiselect
+  become: true
+
+- name: ensure default locale
+  debconf:
+    name: locales
+    question: locales/default_environment_locale
+    value: "{{ locale_default_locale }}"
+    vtype: select
+  become: true
