@@ -2,6 +2,6 @@
 - name: ensure locale
   block:
     - import_tasks: package.yml
-    - import_tasks: debconf.yml
+    - import_tasks: locale.gen.yml
   tags:
     - locale
