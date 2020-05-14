@@ -1,0 +1,9 @@
+---
+- name: ensure locale package
+  include_role:
+    name: "damex.package"
+  vars:
+    package_packages:
+      - name: "{{ locale_package_name }}"
+        version: "{{ locale_package_version }}"
+        state: "{{ locale_package_state }}"
