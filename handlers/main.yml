@@ -1,0 +1,4 @@
+---
+- name: ensure locale
+  command: locale-gen
+  become: true
