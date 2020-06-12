@@ -3,10 +3,5 @@
   template:
     src: "locale.gen.j2"
     dest: "{{ locale_locale_gen_conf_file }}"
-  register: locale_locale_gen_conf
+  notify: ensure locale
   become: true
-
-- name: ensure locale
-  command: locale-gen
-  become: true
-  when: locale_locale_gen_conf.changed
